@@ -4,6 +4,7 @@ import cors from "cors";
 import express from "express";
 import OpenAI from "openai";
 import { z } from "zod";
+import path from "path"
 
 const app = express();
 app.use(
@@ -78,6 +79,14 @@ app.post("/api/chat", async (req, res) => {
     console.error("BACKEND ERROR:", error);
     res.status(500).json({ ok: false, error: error?.message || "Something went wrong" });
   }
+});
+
+const __dirname = path.resolve();
+
+app.use(express.static(path.join(__dirname, "frontend/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend/dist", "index.html"));
 });
 
 const PORT = process.env.PORT || 8080;
