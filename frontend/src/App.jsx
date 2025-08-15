@@ -6,7 +6,7 @@ const PRESETS = [
   { id: 'Piyush_Garg', label: 'Piyush Garg' },
 ];
 
-const API_URL = 'http://localhost:8080/api/chat';
+const API_URL = import.meta.env.MODE === 'development' ? 'http://localhost:8080/api/chat' : '/'
 
 function getStorageKeyForPersona(id) {
   return `personaChatMessages_${id}`;
