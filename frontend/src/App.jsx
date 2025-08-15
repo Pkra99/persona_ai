@@ -6,7 +6,7 @@ const PRESETS = [
   { id: 'Piyush_Garg', label: 'Piyush Garg' },
 ];
 
-const API_URL = import.meta.env.MODE === 'development' ? 'http://localhost:8080/api/chat' : '/'
+const API_URL = import.meta.env.MODE === 'development' ? 'http://localhost:8080/api/chat' : '/api/chat'
 
 function getStorageKeyForPersona(id) {
   return `personaChatMessages_${id}`;
@@ -279,7 +279,7 @@ export default function App() {
             <button
               onClick={send}
               disabled={loading || !input.trim()}
-              className="px-5 py-2 rounded-xl bg-sky-900 text-white font-semibold hover:bg-sky-950 active:scale-[.99] transition-all disabled:bg-sky-200 disabled:cursor-not-allowed"
+              className="px-5 py-2 rounded-xl bg-blue-700 text-white font-semibold hover:bg-blue-800 active:scale-[.99] transition-all disabled:bg-blue-200 disabled:cursor-not-allowed"
             >
               Send
             </button>
