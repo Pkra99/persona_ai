@@ -1,4 +1,4 @@
-Persona Chat AI
+Persona Chat AI https://personaai-production.up.railway.app/
 
 Welcome to Persona Chat AI! This is a full-stack web application that allows you to have conversations with an AI assistant adopting the personality and stylistic voice of various public figures. Built with a modern tech stack, this project leverages the power of Large Language Models to create an engaging and dynamic chat experience.
 ✨ Features
